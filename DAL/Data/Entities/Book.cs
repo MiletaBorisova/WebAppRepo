@@ -11,5 +11,7 @@ namespace DAL.Data.Entities
         public string? Title { get; set; }
         public int AuthorId { get; set; }
         public virtual Author Author { get; set; } = null!;
+        public virtual ICollection<BookCategory> BookCategories { get; set; } = null!;
+
     }
 }

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace DAL.Data.Entities
 {
-    internal class Category
+    public class Category
     {
+        public string? Name { get; set; }
+        public virtual ICollection<BookCategory> BookCategories { get; set; } = null!;
+
     }
 }
